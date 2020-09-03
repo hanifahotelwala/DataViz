@@ -3,7 +3,7 @@
     "path": "~/Documents/CodeBase/Rstudio/dataviz/9-1-2020.Rmd",
     "project_path": "9-1-2020.Rmd",
     "type": "r_markdown",
-    "hash": "2643118376",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1599080780909.0,
@@ -11,15 +11,16 @@
     "relative_order": 2,
     "properties": {
         "tempName": "Untitled1",
-        "cursorPosition": "9,16",
-        "scrollLine": "2"
+        "cursorPosition": "51,52",
+        "scrollLine": "44",
+        "last_setup_crc32": "296E0B47bb338d19"
     },
     "folds": "",
-    "lastKnownWriteTime": 1599080960,
+    "lastKnownWriteTime": 1599149841,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1599080960521,
+    "last_content_update": 1599149841665,
     "read_only": false,
     "read_only_alternatives": []
 }

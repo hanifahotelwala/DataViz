@@ -1,0 +1,60 @@
+---
+title: "Tidyverse basics"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse) ## loads package into the project
+```
+Tidyverse is great for data manipulation. 
+
+### Exercise 1 
+```{r}
+d1 <- data.frame(name = c("Jake", "Abby", "Bailey", "Xavier"), 
+                 age = c(11,20,19,5), 
+                 male = c(TRUE, FALSE, FALSE, TRUE))
+
+print(d1)
+```
+
+Use the dataframe `d1` and keep all the rows where `age` is <= 50. 
+
+For this task we need to use `filter` from deployer. 
+
+```{r}
+d2 <- filter(d1, age <19)
+d2
+```
+### Exercise 2 Use the data frame `d1` and remove all the rows where `age` is > 19 AND male is `false`
+
+```{r}
+d3 <- filter(d1, age > 19 | !male ) #filtering is keeping in never takes anything out so when the directions ask for remove, if using filter think of the inverse.
+d3
+```
+### Exercise 3
+
+From `d1` keep only the first two columns labeled `name` and `age`
+
+```{r}
+select(d1, name, age)
+```
+### Exercise 4
+Extract all columns with names starting with `n`
+```{r}
+select(d1, starts_with("n")) ##all columns that start with n are selected
+```
+### Exercise 5
+Extract all numeric columns
+```{r}
+select(d1, is.numeric) #base r function
+```
+### Exercise 6
+Rename columns:  `name`as `first_name` and `age` as  `age_in_years`
+```{r}
+d1 <-rename(d1,first_name= name, age_in_years = age )
+d1
+```
+
+

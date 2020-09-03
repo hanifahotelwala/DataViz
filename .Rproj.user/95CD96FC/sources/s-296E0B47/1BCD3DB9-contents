@@ -1,0 +1,10 @@
+# 
+##dataviz: install tidyverse packages 
+#install.packages("tidyverse")
+
+
+
+
+##############
+##algorithims
+#library("e1071")

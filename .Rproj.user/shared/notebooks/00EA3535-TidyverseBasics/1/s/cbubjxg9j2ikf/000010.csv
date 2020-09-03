@@ -1,0 +1,2 @@
+"0","d3 <- filter(d1, age > 19 | !male ) #filtering is keeping in never takes anything out so when the directions ask for remove, if using filter think of the inverse."
+"0","d3"
