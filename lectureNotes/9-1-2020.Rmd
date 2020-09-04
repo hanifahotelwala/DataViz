@@ -1,0 +1,89 @@
+---
+title: "Session2(9-1)"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#### Helpful Tips: 
+option+command+i (shortcut to paste R section)
+
+```{r - Helpful Tips}
+```
+### Vectors
+Prints out a charactor vector
+```{r Character vectors}
+vec1 <- c("a", "b", "c", "d", "e")
+print(vec1)
+```
+Prints out a numeric vector
+```{r Numeric vector}
+vec2 <- c(3.14159, 1.414, 5.678, 9.01) #comment
+print(vec2)
+
+```
+
+#### Matrix
+Matrix = 2-D vector 
+```{r Matrix}
+m1 <- matrix(c(3.14159, 1.414, 5.678, 9.01),
+               nrow=2,
+               ncol=2)
+print(m1)
+             
+```
+
+```{r Matrix v2}
+m2 <- matrix(data = vec2, ##using vec2 variable 
+               nrow=2,
+               ncol=2)
+print(m2)
+```
+```{r Identical method}
+identical(m1,m2)
+```
+
+### Data frame
+Collection of individual vectors put together in a 2x2 vector. Vectors HAVE TO BE THE SAME LENGTH in order to do so (i.e. # of elements inside of a vector)
+```{r Intro to Data frame}
+d1 <- data.frame(name = c("Jake", "Abby", "Bailey", "Xavier"), 
+                 age = c(11,20,19,5), 
+                 male = c(TRUE, FALSE, FALSE, TRUE))
+print(d1)
+```
+#### Subset a data frame 
+
+Print first column of d1 
+```{r}
+d1 # also prints d1 without print method
+print(d1$name) #print first column
+
+```
+```{r}
+print(d1[1,1]) #row first, column second
+print(d1[1, ])#comma is important
+```
+Print column names of the data frame
+```{r}
+names(d1) # variables names in the data frame 
+```
+Print the first two rows and the first two columns of d1
+```{r}
+print(d1[c(1,2), c(1,2)]) #vectors being combined. since data frames are composed of vectors 
+```
+```{r}
+print(d1[1:2, 1:2]) # another version 
+```
+Print 1st and3rd row and the 1st and 3rd columns
+```{r}
+print(d1[c(1,3), c(1,3)])
+```
+### List
+```{r Named list}
+list1 <- list(v1 = vec1, v2 = vec2, mat1 = m1, df = d1) #dont print lists because it has a dataframe, vector everything combined together and it is a MESS! 
+print(list1) #prints entire list
+print(list1[c(1,3)]) #prints only the 1st and 3rd of list.
+```
+
+
